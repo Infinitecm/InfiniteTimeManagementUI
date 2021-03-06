@@ -1,0 +1,6 @@
+{
+  "/TM": {
+    "target": "http://localhost:8060",
+    "secure": false
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "status": "success",
+  "statusCode": "0",
+  "managerList": [
+    {
+      "firstName": "Jogendra",
+      "lastName": "Yaramchitti",
+      "emailId": "jogendra.yaramchitti@verizonwireless.com",
+      "role": "Manager",
+      "createDate": "01/01/2019",
+      "projects": [
+        "AB",
+        "CELLVIEW",
+        "DMAT-CLIENT",
+        "DMAT-SERVER",
+        "GENESYS",
+        "INFRA",
+        "LM",
+        "LV/DLA",
+        "ONE PARSER",
+        "TM",
+        "ORBIT",
+        "LCCP",
+        "DNLP",
+        "DTI",
+        "DMAT-T"
+      ]
+    },
+    {
+      "firstName": "Chandra",
+      "lastName": "Rajdurai",
+      "emailId": "chandra.com",
+      "role": "Manager",
+      "createDate": "01/01/2019",
+      "projects": [
+        "AB",
+        "CELLVIEW",
+        "DMAT-CLIENT",
+        "DMAT-SERVER",
+        "GENESYS",
+        "INFRA",
+        "TM",
+        "ORBIT",
+        "LCCP",
+        "DNLP",
+        "DTI",
+        "DMAT-T"
+      ]
+    }
+  ],
+  "tlList": [
+    {
+      "lead": "jogendra.yaramchitti@verizonwireless.com",
+      "firstName": "Romanus Arul Vijay",
+      "lastName": "Antony Maria Dass",
+      "emailId": "arul.antony@verizonwireless.com",
+      "role": "Lead",
+      "rate": "",
+      "vendor": "",
+      "vendorContact": "",
+      "manager": "jogendra.yaramchitti@verizonwireless.com",
+      "projects": [
+        "AB",
+        "CELLVIEW",
+        "DMAT-CLIENT",
+        "DMAT-SERVER",
+        "GENESYS",
+        "INFRA",
+        "LM",
+        "LV/DLA",
+        "ONE PARSER",
+        "TM",
+        "ORBIT_INFRA",
+        "LCCP",
+        "DNLP",
+        "DTI",
+        "DMAT-T"
+      ],
+      "createDate": null
+    },
+    {
+      "lead": "chandra.rajdurai@infinite.com",
+      "firstName": "Jayalakshmi",
+      "lastName": "Rajendran",
+      "emailId": "Jaya@infinite.com",
+      "role": "Lead",
+      "rate": "",
+      "vendor": "",
+      "vendorContact": "",
+      "manager": "chandra.rajdurai@infinite.com",
+      "projects": [
+        "AB",
+        "CELLVIEW",
+        "DMAT-CLIENT",
+        "DMAT-SERVER",
+        "GENESYS",
+        "INFRA",
+        "LM",
+        "LV/DLA",
+        "ONE PARSER",
+        "TM",
+        "ORBIT_INFRA",
+        "LCCP",
+        "DNLP",
+        "DTI",
+        "DMAT-T"
+      ],
+      "createDate": null
+    }
+  ],
+  "memberList": [
+    {
+      "firstName": "MaheshKumar",
+      "lastName": "Purusothaman",
+      "emailId": "maheshp@vzwdt.com",
+      "role": "User",
+      "rate": "77",
+      "vendor": "INFINITE",
+      "vendorContact": "Chandrar@infinite.com,Rahul.Kapoor@infinite.com",
+      "lead": "Jaya@infinite.com",
+      "projects": [
+        "DMAT-SERVER",
+        "INFRA",
+        "ONE PARSER",
+        "GENESYS",
+        "LV/DLA",
+        "LM",
+        "TM",
+        "AB",
+        "CELLVIEW"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 1,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "Jayalakshmi",
+      "lastName": "Rajendran",
+      "emailId": "jayalakshmir@infinite.com",
+      "role": "User",
+      "rate": "23.00",
+      "vendor": "INFINITE",
+      "vendorContact": "Chandrar@infinite.com,Rahul.Kapoor@infinite.com",
+      "lead": "arul.antony@verizonwireless.com",
+      "projects": [
+        "CELLVIEW",
+        "GENESYS",
+        "LM",
+        "TM",
+        "DTI"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 8,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "Chitrambala",
+      "lastName": "Umamaheswari",
+      "emailId": "chitrambala.umamaheswari@infinite.com",
+      "role": "User",
+      "rate": "23.00",
+      "vendor": "INFINITE",
+      "vendorContact": "Chandrar@infinite.com,Rahul.Kapoor@infinite.com",
+      "lead": "arul.antony@verizonwireless.com",
+      "projects": [
+        "GENESYS"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 16,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "Keerthiga",
+      "lastName": "Kalidas",
+      "emailId": "keerthiga.kalidas@infinite.com",
+      "role": "User",
+      "rate": "23.00",
+      "vendor": "INFINITE",
+      "vendorContact": "Chandrar@infinite.com,franklin.premraj@infinite.com",
+      "lead": "Jaya@infinite.com",
+      "projects": [
+        "GENESYS",
+        "CELLVIEW"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 13,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "Thulasiraman",
+      "lastName": "Kannan",
+      "emailId": "thulasiraman.kannan@infinite.com",
+      "role": "User",
+      "rate": "23.00",
+      "vendor": "INFINITE",
+      "vendorContact": "Chandrar@infinite.com,franklin.premraj@infinite.com",
+      "lead": "arul.antony@verizonwireless.com",
+      "projects": [
+        "GENESYS",
+        "DTI",
+        "TM",
+        "LM"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 13,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "krutika",
+      "lastName": "Patel",
+      "emailId": "krutikap@vzwdt.com",
+      "role": "User",
+      "rate": "46.00",
+      "vendor": "AGREEYA",
+      "vendorContact": "soumya.vishwanath@agreeya.com, timesheets@agreeya.com",
+      "lead": "arul.antony@verizonwireless.com",
+      "projects": [
+        "AB",
+        "CELLVIEW",
+        "DMAT-CLIENT",
+        "DMAT-SERVER",
+        "GENESYS",
+        "INFRA",
+        "LM",
+        "LV/DLA",
+        "ONE PARSER",
+        "TM",
+        "ORBIT_INFRA",
+        "LCCP",
+        "DNLP",
+        "DTI",
+        "DMAT-T"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 0,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "Mohandass",
+      "lastName": "Michael",
+      "emailId": "mohandass@vzwdt.com",
+      "role": "User",
+      "rate": "80.00",
+      "vendor": "INFINITE",
+      "vendorContact": "Chandrar@infinite.com,franklin.premraj@infinite.com",
+      "lead": "arul.antony@verizonwireless.com",
+      "projects": [
+        "DMAT-SERVER",
+        "GENESYS",
+        "LM",
+        "TM",
+        "CELLVIEW"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 4,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "roshni",
+      "lastName": "vdsi",
+      "emailId": "roshni.krishnamohan@in.verizon.com",
+      "role": "User",
+      "rate": "6.70",
+      "vendor": "INFINITE",
+      "vendorContact": "Chandrar@infinite.com,franklin.premraj@infinite.com",
+      "lead": "arul.antony@verizonwireless.com",
+      "projects": [
+        "DMAT-SERVER",
+        "LV/DLA"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 0,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "Parthiban",
+      "lastName": "Atchayankumar",
+      "emailId": "parthiban.atchayakumar@infinite.com",
+      "role": "User",
+      "rate": "18.00",
+      "vendor": "INFINITE",
+      "vendorContact": "Chandrar@infinite.com,franklin.premraj@infinite.com",
+      "lead": "arul.antony@verizonwireless.com",
+      "projects": [
+        "GENESYS"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 11,
+      "approvedFlag": false
+    },
+    {
+      "firstName": "Vishnuprasad",
+      "lastName": "Ramasubramani",
+      "emailId": "vishnu.ramasubramani@vzwdt.com",
+      "role": "User",
+      "rate": "68.00",
+      "vendor": "AGREEYA",
+      "vendorContact": "soumya.vishwanath@agreeya.com, timesheets@agreeya.com",
+      "lead": "arul.antony@verizonwireless.com",
+      "projects": [
+        "DMAT-SERVER",
+        "ONE PARSER",
+        "LV/DLA",
+        "GENESYS"
+      ],
+      "createDate": "01/01/2019",
+      "submitCount": 0,
+      "approvedFlag": false
+    }
+  ]
+}

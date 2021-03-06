@@ -1,0 +1,67 @@
+.noBurnData{
+    display: none;
+}
+.burnDataExists{
+    display: block;
+}
+.errorMsg{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.factorBurnReport{
+    background: aliceblue;
+    padding: 20px;
+    height:133px;
+}
+.buttonAction{
+    position: relative;
+    top: -50px;
+    display: flex;
+}
+.searchBurnReport button{
+    position: relative;
+    left: 45px;
+}
+
+.downloadBurnReport button{
+    position: relative;
+    left: 62px;
+}
+
+table thead{
+    background: #336ab6;
+    color: #fff;
+}
+table thead th{
+    padding: 10px 18px 10px 10px;
+}
+table tr td{
+    color:#223;
+}
+
+.noDataExists{
+    text-align: center;
+    position: relative;
+    top: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #887474;
+}
+.noDataExists .msg2{
+    position: relative;
+    top: 15px;
+}
+.HolidayT{
+    background:rgb(4, 160, 4);
+    color: #fff !important;
+    font-weight: bold;
+    text-align: center;
+}
+.LeaveT{
+    background: rgb(236, 155, 3);
+    color: #fff !important;
+    font-weight: bold;
+    text-align: center;
+}

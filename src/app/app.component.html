@@ -1,0 +1,6 @@
+<app-header *ngIf="!(_router.url === '/login' || _router.url === '/forgotPassword')"></app-header> 
+<!-- <app-side-panel *ngIf="!(_router.url === '/login' || _router.url === '/forgotPassword')"></app-side-panel> -->
+
+<router-outlet></router-outlet>
+
+<app-tm-loader></app-tm-loader>

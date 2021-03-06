@@ -1,0 +1,98 @@
+<div class="container-fluid userTimesheetMain">
+  <div class="row">
+    <div class="col-sm-2">
+
+    </div>
+
+    <div class="col-sm-10">
+      <!--  ----------- MANAGER COLUMN -------------  -->
+      <div class="col-sm-4 managerColumn">
+        <div class="desgTitle allMember">
+          All Manager
+
+          <span *ngIf="role == 'admin'" class="addMember" (click)="addThisEmployee('Manager')"><i
+              class="fa fa-plus"></i></span>
+
+        </div>
+        <div class="underList">
+          <ul>
+            <li *ngFor="let manager of managerList;" (click)="selected_Lead_Manager(manager.emailId, manager.role)"
+              [class.selected]="manager.emailId === selectedManager">
+              {{manager.firstName+"  "+ manager.lastName}} <br />
+              <span class="managerPosition"> {{manager.role}} </span>
+
+              <span class="seniorEditMember">
+                <i (click)="routeToUserTimesheet(manager.emailId, manager.role)" *ngIf="manager.emailId === email" class="fa fa-clock-o timesheetIcon"></i>
+                <span *ngIf="role == 'admin'" (click)="editThisRole(manager.emailId, manager.role)">
+                  <i style="margin-left:5px;" class="fa fa-pencil"> </i>
+                </span></span>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+
+
+      <!--  ----------- LEAD COLUMN -------------  -->
+      <div class="col-sm-4 leadColumn">
+        <div class="desgTitle allMember">
+          All Lead
+
+          <span *ngIf="role == 'Manager'" class="addMember" (click)="addThisEmployee('Lead')"><i
+              class="fa fa-plus"></i></span>
+
+        </div>
+        <div class="underList">
+          <ul>
+            <span *ngFor="let lead of leadList">
+              <li *ngIf="selectedManager === lead.manager" (click)="selected_Lead_Manager(lead.emailId, lead.role)"
+                [class.selected]="lead.emailId === selectedLead">
+                <!-- <li *ngFor="let lead of leadList" 
+             (click)="selectedLeadForUser(lead.emailId)" [class.selected]="lead.emailId === selectedLead"> -->
+
+                {{lead.firstName +" "+ lead.lastName}}<br />
+                <span class="managerPosition"> {{lead.role}} </span>
+
+                <span class="seniorEditMember">
+                  <i (click)="routeToUserTimesheet(lead.emailId, lead.role)" *ngIf="lead.emailId === email" class="fa fa-clock-o timesheetIcon"></i>
+                  <span *ngIf="role == 'Manager'" (click)="editThisRole(lead.emailId, lead.role)">
+                    <i (click)="routeToUserTimesheet(lead.emailId, lead.role)" class="fa fa-clock-o timesheetIcon"></i>
+                    <i style="margin-left:5px;" class="fa fa-pencil"> </i></span></span>
+
+              </li>
+            </span>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-4 memberColumn">
+        <div class="desgTitle allMember">
+          All Member
+
+          <span *ngIf="role != 'admin'" class="addMember" (click)="addThisEmployee('User')"><i
+              class="fa fa-plus"></i></span>
+
+        </div>
+        <div class="listOfMember">
+          <div class="individualMember">
+            <ul>
+              <span *ngFor="let user of userList">
+                <li *ngIf="selectedLead === user.lead">
+                  <span
+                    class="memberName">{{user.firstName+" "+user.lastName}}</span>
+                  <span *ngIf="role != 'admin'" class="editMember">
+                    <i (click)="routeToUserTimesheet(user.emailId, user.role)"  class="fa fa-clock-o timesheetIcon1"></i>
+                    <i style="margin-left:5px;" (click)="editThisRole(user.emailId, user.role)" class="fa fa-pencil"> </i></span>
+                </li>
+              </span>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

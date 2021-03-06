@@ -1,0 +1,46 @@
+<div *ngIf="!length" class="alerts-container" >
+  <div *ngFor="let alert of alerts" class="alert {{ cssClass(alert) }}">
+    <a class="close" title="Close" (click)="removeAlert(alert)">&times;</a>
+    <div class="alert-inside">
+      <p class="alert-message" [ngSwitch]="loggedRole">
+        <span  *ngSwitchCase="'Manager'" >
+          <i class='fa fa-bell faa-ring animated fa-2x' style=" color: #0292B7"></i>
+          {{alert.message}} {{Username}},<br />Please approve/reject the Timesheet.<br /><h5 style="text-align:left; font-weight:bold;">Have a good day..!!</h5></span>
+        <span *ngSwitchCase="'User'">
+          <i class='fa fa-bell faa-ring animated fa-2x' style=" color: #0292B7"></i>
+          {{alert.message}} {{Username}},<br />Please submit your Timesheet.<br /><h5 style="text-align:left; font-weight: bold;">Have a good day..!!</h5></span>
+        <span *ngSwitchCase="'Lead'">
+          <i class='fa fa-bell faa-ring animated fa-2x' style="  color:#0292B7; "></i>
+           {{alert.message}} {{Username}},<br />Please approve/reject the Timesheet.<br /><h5 style="text-align:left; font-weight: bold;">Have a good day..!!</h5></span>
+      </p>
+    </div>
+  </div>
+</div>
+<div *ngIf="!length2" class="alerts2-container">
+  <div *ngFor="let alert2 of alerts2" class="alert2 {{ cssClass2(alert2) }}">
+    <a class="close" title="Close" (click)="removeAlert2(alert2)">&times;</a>
+    <div class="alert2-inside">
+      <p class="alert2-message" [ngSwitch]="loggedRole">
+        <span *ngSwitchCase="'Manager'">
+          <i class='fa fa-bell faa-ring animated fa-2x' style="color: #0292B7"></i>
+          {{alert2.message}} {{Username}},<br />Please submit your Timesheet.<br /><h5 style="text-align:left; font-weight: bold;">Have a good day..!!</h5></span>
+        <span *ngSwitchCase="'Lead'">
+          <i class='fa fa-bell faa-ring animated fa-2x' style=" color:#0292B7; "></i>
+          {{alert2.message}} {{Username}},<br />Please submit your Timesheet.<br /> <h5 style="text-align:left; font-weight: bold;">Have a good day..!!</h5></span></p>
+    </div>
+  </div>
+</div>
+<div *ngIf="!length3" class="alerts3-container">
+  <div *ngFor="let alert3 of alerts3" class="alert3 {{ cssClass3(alert3) }}">
+    <a class="close" title="Close" (click)="removeAlert3(alert3)">&times;</a>
+    <div class="alert3-inside">
+      <p class="alert3-message" [ngSwitch]="loggedRole">
+        <span *ngSwitchCase="'Manager'">
+          <i class='fa fa-bell faa-ring animated fa-2x' style=" color: #0292B7"></i>
+          {{alert3.message}} {{Username}},<br />Please approve/reject the Timesheet.<br /><h5 style="text-align:left; font-weight: bold;">Have a good day..!!</h5></span>
+        <span *ngSwitchCase="'Lead'">
+          <i class='fa fa-bell faa-ring animated fa-2x' style="color: #0292B7; "></i>
+          {{alert3.message}} {{Username}},<br />Please approve/reject the Timesheet. <br /><h5 style="text-align:left; font-weight: bold;">Have a good day..!!</h5></span> </p>
+    </div>
+  </div>
+</div>

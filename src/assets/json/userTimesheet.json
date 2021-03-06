@@ -1,0 +1,52 @@
+{
+  "userData": {
+      "email": "mohit@infinite.com",
+      "firstName": "mohit",
+      "lastName": "sharma",
+      "lead": "mukesh@infinite.com",
+      "manager": "ramawati@infinite.com",
+      "vendor": "ics",
+      "role": "user",
+      "leadFirstName": "mukesh",
+      "leadLastName": "sharma",
+      "submittedBy": ""
+  },
+  "projects": [
+      {
+          "project": "VMAS",
+          "monday": 0.0,
+          "tuesday": 0.0,
+          "wednesday": 0.0,
+          "thursday": 0.0,
+          "friday": 0.0,
+          "status": 2
+      },
+      {
+          "project": "TimeManagement",
+          "monday": 0.0,
+          "tuesday": 0.0,
+          "wednesday": 3.5,
+          "thursday": 0.0,
+          "friday": 8.0,
+          "status": 2
+      },
+      {
+          "project": "Scripps",
+          "monday": 7.0,
+          "tuesday": 5.0,
+          "wednesday": 4.0,
+          "thursday": 0.0,
+          "friday": 0.0,
+          "status": 2
+      },
+      {
+        "project": "Genesys",
+        "monday": 0.0,
+        "tuesday": 0.0,
+        "wednesday": 4.0,
+        "thursday": 0.0,
+        "friday": 8.0,
+        "status": 2
+    }
+  ]
+}

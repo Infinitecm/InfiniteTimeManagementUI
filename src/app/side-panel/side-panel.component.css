@@ -1,0 +1,51 @@
+.sidePanelTimesheet{
+    float:left;
+    width: 17%;
+    /** top:90px; */
+    background: #337ab7;
+    min-height: 100vh;
+    position:fixed;
+    z-index:10;
+  }
+  .leftPanelInfo{
+      position:relative;
+      top:74px;
+  }
+  .currentDate{
+      text-align: center;
+      color: #ede;
+      font-weight: bold;
+      border-top: 0.2px solid #aaa;
+      border-bottom: 0.1px solid #aaa;
+      padding: 4px 0px;
+  }
+
+
+/************* MANAGER MENU ***************/
+.managerMenu{
+	margin-left:-41px;
+}
+.managerMenu ul{
+	list-style:none;
+}
+.managerMenu li{
+	color: #ddf;
+    background: #337ab7;
+    font-size: 15px;
+    border-bottom: 1px solid #fff;
+    padding: 20px 10px;
+	cursor:pointer;
+    text-align: left;
+	transition-duration: 0.5s;
+}
+.managerMenu li:hover{
+    background: #1a248f;
+	padding-left: 20px;
+	color:#fef;
+}
+.managerMenu li:hover .eye i{
+	color:#efe;
+}
+.managerMenu .eye{
+	float:right
+}  

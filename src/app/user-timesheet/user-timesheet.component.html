@@ -1,0 +1,273 @@
+<div class="container-fluid">
+
+  <form [formGroup]="weekForm">
+    <div class="row">
+      <div class="col-sm-2">
+        <app-user-side-panel>
+        </app-user-side-panel>
+      </div>
+      <div class="col-sm-10 userTimesheetMain">
+
+        <div id="content" border="1" width="100%" class="col-sm-12" #content>
+          <div class="col-sm-4 userInfoCommonStyle userNameMail">
+            <span class="userTimsheetName"><strong> Name: {{userName | titlecase}} </strong> </span> <br />
+            <span class="userTimsheetMail"><strong> Email: {{userMail | titlecase}} </strong> </span>
+          </div>
+          <div class="col-sm-4 userInfoCommonStyle userVendorRole">
+            <span class="userRole"> <strong>Role: {{userRole | titlecase}} </strong></span> <br />
+            <span class="userVendor"> <strong>Account: {{userAccounts}} </strong> </span>
+          </div>
+          <div class="col-sm-4 userInfoCommonStyle userBoss">
+            <span class="usersLead"> <strong>Lead: {{leadMail}} </strong></span> <br />
+            <span class="usersManager"> <strong>Manager: {{managerMail}} </strong></span>
+          </div>
+          <!-- for notification -->
+          <div class="root-container">
+            <alert></alert>
+            <div class="main-container">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+          <br />
+
+          <div class="col-sm-12">
+            <div class="col-sm-6 preTitle">
+              <h2>Timesheet For {{userRole}} </h2>
+
+              <div class="dropDownWeek">
+                <span>
+                  <button type="button" class="previousIcon" (click)="btnPreNext(-1)"
+                    [ngClass]="{'btnDisabled':weekSlotSelected === 0}" [disabled]="weekSlotSelected === 0">
+                    <i class="fa fa-hand-o-left"></i></button>
+                </span>
+
+                <select formControlName="week" class="timesheetWeakDropDown">
+                  <option *ngFor="let week of weekList" [ngValue]="week.weekNo" (click)="onWeekChange(week.weekNo)">
+                    <span style="width:250px; display: inline-block;" class="weekDate"> {{week.startDate}} -
+                      {{week.endDate}} </span>
+                    <span style="float: right;" class="weekStat">({{week.status}})</span></option>
+                </select>
+
+                <span>
+                  <button type="button" class="nextIcon" (click)="btnPreNext(1)"
+                    [ngClass]="{'btnDisabled':weekSlotSelected === weekList.length}"
+                    [disabled]="weekSlotSelected === weekList.length">
+                    <i class="fa fa-hand-o-right"></i></button>
+                </span>
+              </div>    <!--dropdown div ends-->
+            </div>    <!--pretitle div ends-->
+
+            <!-- FOR SUBMITTED WEEKSLOTS   -->
+            <div *ngIf="isSubmitted || isApproved" class="col-md-6 col-sm-6 col-xs-12 submitInfo">
+              <span class="name"> Submitted By - {{submittedByName}}</span>
+            </div>
+            <!--submitted weekslots div ends-->
+
+          </div>
+          <!--col-sm-12 ends-->
+
+
+          <div class="col-sm-12 timesheetTable">
+            <table border="1px" class="table table-striped">
+              <thead>
+                <th>Project</th>
+                <th>Mon <br /> {{monDate}}</th>
+                <th>Tue <br /> {{tueDate}}</th>
+                <th>Wed <br /> {{wedDate}}</th>
+                <th>Thu <br /> {{thuDate}}</th>
+                <th>Fri <br /> {{friDate}}</th>
+                <th>Total Hours(Project)</th>
+
+              </thead>
+              <tbody>
+                <!-- <ng-container formArrayName="daysForm" *ngFor="let day of weekForm.get('daysForm').controls;let j=index"> -->
+                <ng-container formArrayName="daysForm">
+                  <tr [formGroupName]="0" *ngFor="let project of projects; let i=index;">
+                    <td>{{project.project}} </td>
+
+                    <td><input
+                        [attr.disabled]="(project.status === 3 || project.status === 4) || (mondayEnd && project.status === 2) || (mondayLeave === true) || (mondayHoliday.is) ?  '':null"
+                        [title]="mondayHoliday.is? mondayHoliday.title :''"
+                        [ngClass]="{'timeInHourSubmitted':(project.status === 3 || project.status === 4),
+                                     'HolidayTest':mondayHoliday.is, 'LeaveT':mondayLeave , 'monthEnd': (mondayEnd  && project.status === 2 )}"
+                        (keyup)="caluculateHours('monday')" type="number" formControlName="monday{{i+1}}" min="0"
+                        max="8" class="timeInHour">
+                    </td>
+
+
+                    <td><input
+                        [attr.disabled]="(project.status === 3 || project.status === 4) || (tuesdayEnd && project.status === 2) || (tuesdayLeave === true) || (tuesdayHoliday.is) ?  '':null"
+                        [title]="tuesdayHoliday.is? tuesdayHoliday.title :''"
+                        [ngClass]="{'timeInHourSubmitted':(project.status === 3 || project.status === 4),
+                                  'HolidayTest':tuesdayHoliday.is, 'LeaveT':tuesdayLeave, 'monthEnd':(tuesdayEnd && project.status === 2)}"
+                        (keyup)="caluculateHours('tuesday')" type="number" formControlName="tuesday{{i+1}}" min="0"
+                        max="8" class="timeInHour">
+                    </td>
+
+
+                    <td><input
+                        [attr.disabled]="(project.status === 3 || project.status === 4) || (wednesdayEnd && project.status === 2) || (wednesdayLeave === true) || (wednesdayHoliday.is) ?  '':null"
+                        [title]="wednesdayHoliday.is? wednesdayHoliday.title :''"
+                        [ngClass]="{'timeInHourSubmitted':(project.status === 3 || project.status === 4),
+                                  'HolidayTest':wednesdayHoliday.is, 'LeaveT':wednesdayLeave, 'monthEnd':(wednesdayEnd && project.status === 2)}"
+                        (keyup)="caluculateHours('wednesday')" type="number" formControlName="wednesday{{i+1}}" min="0"
+                        max="8" class="timeInHour">
+                    </td>
+
+                    <td><input
+                        [attr.disabled]="(project.status === 3 || project.status === 4) || (thursdayEnd && project.status === 2) || (thursdayLeave === true) || (thursdayHoliday.is) ?  '':null"
+                        [title]="thursdayHoliday.is? thursdayHoliday.title :''"
+                        [ngClass]="{'timeInHourSubmitted':(project.status === 3 || project.status === 4),
+                                  'HolidayTest':thursdayHoliday.is, 'LeaveT':thursdayLeave, 'monthEnd':(thursdayEnd && project.status === 2)}"
+                        (keyup)="caluculateHours('thursday')" type="number" formControlName="thursday{{i+1}}" min="0"
+                        max="8" class="timeInHour">
+                    </td>
+
+                    <!-- [attr.disabled]="(fridayHoliday.is)?'':null" -->
+                    <td><input
+                        [attr.disabled]="(project.status === 3 || project.status === 4) || (fridayEnd && project.status === 2) || (fridayLeave === true) || (fridayHoliday.is) ?  '':null"
+                        [title]="fridayHoliday.is? fridayHoliday.title :''"
+                        [ngClass]="{'timeInHourSubmitted':(project.status === 3 || project.status === 4),
+                                  'HolidayTest':fridayHoliday.is, 'LeaveT':fridayLeave, 'monthEnd':(fridayEnd && project.status === 2)}"
+                        (keyup)="caluculateHours('friday')" type="number" formControlName="friday{{i+1}}" min="0"
+                        max="8" class="timeInHour">
+                    </td>
+
+
+                    <td><input [attr.disabled]="true" class="timeInHour timeInHourSubmitted timeBold" type="number"
+                        formControlName="project{{i+1}}">
+                    </td>
+                  </tr>
+                </ng-container>
+
+                <tr>
+                  <td>Total Hours(Day)</td>
+                  <td class="bottomTimer">{{mondayHrs}} </td>
+                  <td class="bottomTimer">{{tuesdayHrs}} </td>
+                  <td class="bottomTimer">{{wednesdayHrs}}</td>
+                  <td class="bottomTimer">{{thursdayHrs}} </td>
+                  <td class="bottomTimer">{{fridayHrs}} </td>
+                  <td class="bottomTimer">{{totalWeekHrs}} </td>
+                </tr>
+                <tr class="leaveRow" *ngIf="leaveDOM">
+                  <td> <strong>Leave </strong></td>
+                  <td>
+                    <ng-container *ngIf="! mondayHoliday.is">Monday
+                      <input [checked]="false" (click)="applyLeave($event,'monday')" type="checkbox">
+                    </ng-container>
+                  </td>
+
+                  <td>
+                    <ng-container *ngIf="! tuesdayHoliday.is">Tuesday
+                      <input (click)="applyLeave($event,'tuesday')" type="checkbox">
+                    </ng-container>
+                  </td>
+
+                  <td>
+                    <ng-container *ngIf="! wednesdayHoliday.is">Wednesday
+                      <input (click)="applyLeave($event,'wednesday')" type="checkbox">
+                    </ng-container>
+                  </td>
+
+                  <td>
+                    <ng-container *ngIf="! thursdayHoliday.is">Thursday
+                      <input (click)="applyLeave($event,'thursday')" type="checkbox">
+                    </ng-container>
+                  </td>
+
+                  <td>
+                    <ng-container *ngIf="! fridayHoliday.is">Friday
+                      <input (click)="applyLeave($event,'friday')" type="checkbox">
+                    </ng-container>
+                  </td>
+
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <!--table ends-->
+            <!-- 
+            <div  class="leaveDay">
+              <table >
+                <tr>
+                  <td> <strong>Leave </strong></td>
+                  <td>Monday <input (click)="applyLeave($event,'monday')" type="checkbox"> </td>
+                  <td>Tuesday <input (click)="applyLeave($event,'tuesday')" type="checkbox"> </td>
+                  <td>Wednesday <input (click)="applyLeave($event,'wednesday')" type="checkbox"> </td>
+                  <td>Thursday <input (click)="applyLeave($event,'thursday')" type="checkbox"> </td>
+                  <td>Friday <input (click)="applyLeave($event,'friday')" type="checkbox"> </td>
+                </tr>
+              </table>
+            </div> -->
+
+          </div>
+          <!--timesheet div table ends-->
+        </div>
+        <!--content div ends-->
+
+
+        <div class="col-sm-9 btnTimesheet">
+          <div class="btn-toolbar">
+            <button *ngIf="(!(isSubmitted) && !(isApproved) )" (click)="onSubmitTheTimesheet(2)"
+              class="btn btn-primary">
+              <i class="fa fa-file-text-o"></i> Save</button>
+
+            <button *ngIf="!(isSubmitted) && !(isApproved)" (click)="onSubmitTheTimesheet(3)" class="btn btn-primary"
+              [disabled]="disableSubmit">
+              <i class="fa fa-upload"></i> Submit</button>
+
+            <button *ngIf="isApproved" (click)="downloadPdf()" class="btn btn-primary">
+              <i class="fa fa-file-pdf-o"></i> Download PDF</button>
+
+            <button *ngIf="(loggedRole != 'User') && (isSubmitted) && !(isApproved) && (loggedMail != routeMail)"
+              class="btn btn-success" (click)="actionOnApproveOrReject('approve')">
+              <i class="fa fa-thumbs-up"></i> Approve</button>
+
+            <button *ngIf="(loggedRole != 'User') && (isSubmitted) && !(isApproved) && (loggedMail != routeMail)"
+              class="btn btn-danger" (click)="actionOnApproveOrReject('reject')">
+              <i class="fa fa-times"></i> Reject</button>
+
+            <button *ngIf="(loggedRole !='User') && (isApproved) && (loggedMail != routeMail)" class="btn btn-warning"
+              (click)="actionOnApproveOrReject('revoke')">
+              <i class="fa fa-refresh"></i> Revoke</button>
+
+          </div>
+
+        </div>
+        <div class="col-sm-2">
+          <button *ngIf="!(isSubmitted) && !(isApproved)" (click)="toggleLeaves()" class="btn btn-primary">
+            <i class="fa fa-sign-out"></i> Record Leave</button>
+        </div>
+        <!--timesheet btn ends-->
+
+        <div class="col-sm-6 holidayList">
+          <span class="holidayBoard">
+            Rest Day
+          </span>
+          <div *ngIf="holidayList.length > 0; else noHoliday">
+            <ul>
+              <li *ngFor="let holiday of holidayList">
+                {{holiday.date}} <i style="margin:0px 15px 0px 15px;" class="fa fa-arrow-right"></i> {{holiday.reason}}
+              </li>
+            </ul>
+          </div>
+          <ng-template #noHoliday>
+            <div class="noHoliday">
+              No Off-Day
+            </div>
+          </ng-template>
+        </div>
+
+      </div>
+      <!--sm-10 col div ends-->
+
+
+    </div>
+    <!--row div ends-->
+  </form>
+
+
+
+
+
+</div>

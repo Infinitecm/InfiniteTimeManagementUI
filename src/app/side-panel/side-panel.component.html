@@ -1,0 +1,23 @@
+<div class="sidePanelTimesheet">
+  <div class="leftPanelInfo">
+    <div class="currentDate">Today's Date:
+      {{todayDate.getMonth()+1}}/{{todayDate.getDate()}}/{{todayDate.getFullYear()}} </div>
+    <div *ngIf="router.url === '/userTimesheet'" class="currentDate">
+      <i class="fa fa-clock-o"></i> Time Sheet Entry </div>
+
+    <div *ngIf="router.url === '/managerTimesheet'" class="managerMenu">
+      <ul>
+        <li><i class="fa fa-user"></i> User Management</li>
+        <li (click)="actionOnBulkOperation()">
+          <i class="fa fa-user"></i> Bulk Approval/Reject</li>
+        <li><i class="fa fa-envelope"></i> PO Summary <span class="eye"> <i class="fa fa-eye-slash"></i> </span></li>
+        <li><i class="fa fa-briefcase"></i> User Burn Rate <span class="eye"> <i class="fa fa-eye-slash"></i> </span>
+        </li>
+        <li><i class="fa fa-suitcase"></i> Project Burn Rate <span class="eye"> <i class="fa fa-eye-slash"></i> </span>
+        </li>
+        <li><i class="fa fa-briefcase"></i> Deliverables <span class="eye"> <i class="fa fa-eye-slash"></i> </span></li>
+      </ul>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,1018 @@
+
+[
+    {
+        "empId": "78",
+        "empName": "Akash Barnwal",
+        "account": "Verizon",
+        "project": "VMAS",
+        "location": "Chennai",
+        "hours": [
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/2/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/3/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/4/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/5/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/6/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/9/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/10/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/11/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/12/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/13/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/16/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/17/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/18/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/19/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/20/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/23/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/24/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/25/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/26/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/27/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/30/2020",
+                "day": "Mon"
+            }
+        ],
+        "totalHours": 84.0,
+        "weeks": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            4.0
+        ],
+        "billRate": "86",
+        "amount": "7224.0"
+    },
+    {
+        "empId": "23",
+        "empName": "logapriya siva",
+        "account": "Verizon",
+        "project": "VMAS",
+        "location": "Chennai",
+        "hours": [
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/2/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/3/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/4/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/5/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/6/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/9/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/10/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/11/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/12/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/13/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/16/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/17/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/18/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/19/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/20/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/23/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/24/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/25/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/26/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/27/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/30/2020",
+                "day": "Mon"
+            }
+        ],
+        "totalHours": 84.0,
+        "weeks": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            4.0
+        ],
+        "billRate": "96",
+        "amount": "8064.0"
+    },
+    {
+        "empId": "09",
+        "empName": "priyanka Sharma",
+        "account": "Verizon",
+        "project": "VMAS",
+        "location": "Chennai",
+        "hours": [
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/2/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/3/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/4/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/5/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/6/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/9/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/10/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/11/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/12/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/13/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/16/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/17/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/18/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/19/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/20/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/23/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/24/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/25/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/26/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/27/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "VMAS",
+                "hours": 4.0,
+                "date": "11/30/2020",
+                "day": "Mon"
+            }
+        ],
+        "totalHours": 84.0,
+        "weeks": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            4.0
+        ],
+        "billRate": "97",
+        "amount": "8148.0"
+    },
+    {
+        "empId": "78",
+        "empName": "Akash Barnwal",
+        "account": "Verizon",
+        "project": "GENESYS",
+        "location": "Chennai",
+        "hours": [
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/2/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/3/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 8.0,
+                "date": "11/4/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 8.0,
+                "date": "11/5/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 5.6,
+                "date": "11/6/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/9/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/10/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/11/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/12/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/13/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/16/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/17/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/18/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/19/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/20/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/23/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/24/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/25/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/26/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/27/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/30/2020",
+                "day": "Mon"
+            }
+        ],
+        "totalHours": 84.0,
+        "weeks": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            4.0
+        ],
+        "billRate": "86",
+        "amount": "7224.0"
+    },
+    {
+        "empId": "09",
+        "empName": "priyanka Sharma",
+        "account": "Verizon",
+        "project": "GENESYS",
+        "location": "Chennai",
+        "hours": [
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/2/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/3/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/4/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/5/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/6/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/9/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/10/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/11/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/12/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/13/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/16/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/17/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/18/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/19/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/20/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/23/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/24/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/25/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/26/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/27/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/30/2020",
+                "day": "Mon"
+            }
+        ],
+        "totalHours": 84.0,
+        "weeks": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            4.0
+        ],
+        "billRate": "97",
+        "amount": "8148.0"
+    },
+    {
+        "empId": "68",
+        "empName": "antora ghosh",
+        "account": "Verizon",
+        "project": "GENESYS",
+        "location": "Chennai",
+        "hours": [
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/2/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/3/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/4/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/5/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/6/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/9/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/10/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/11/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/12/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/13/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/16/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/17/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/18/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/19/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/20/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/23/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/24/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/25/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/26/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/27/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "GENESYS",
+                "hours": 4.0,
+                "date": "11/30/2020",
+                "day": "Mon"
+            }
+        ],
+        "totalHours": 84.0,
+        "weeks": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            4.0
+        ],
+        "billRate": "86",
+        "amount": "7224.0"
+    },
+    {
+        "empId": "53",
+        "empName": "shilpa singh",
+        "account": "Nokia",
+        "project": "Communication",
+        "location": "Chennai",
+        "hours": [
+            {
+                "projectName": "Communication",
+                "hours": 8.0,
+                "date": "11/30/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 5.0,
+                "date": "11/23/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 6.0,
+                "date": "11/24/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/25/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/26/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/27/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/16/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/17/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/18/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/19/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/20/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/9/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/10/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/11/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/12/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/13/2020",
+                "day": "Fri"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/2/2020",
+                "day": "Mon"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/3/2020",
+                "day": "Tue"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/4/2020",
+                "day": "Wed"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/5/2020",
+                "day": "Thu"
+            },
+            {
+                "projectName": "Communication",
+                "hours": 4.0,
+                "date": "11/6/2020",
+                "day": "Fri"
+            }
+        ],
+        "totalHours": 91.0,
+        "weeks": [
+            8.0,
+            23.0,
+            20.0,
+            20.0,
+            20.0
+        ],
+        "billRate": "23",
+        "amount": "2093.0"
+    }
+]
