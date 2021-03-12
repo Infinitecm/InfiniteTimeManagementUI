@@ -39,10 +39,10 @@
             <li *ngFor="let week of employee.weeks" class="list-group-item weekEntity">
               <div class="list">
               <section class="dateSlots">
-                {{week.startDate}} - {{week.endDate}}
+                {{week.startDate}} - {{week.endDate}}  <span class="actionsNumber2">{{week.totalHours}}</span>
               </section>
               
-              <span class="slotSubmittedBy">Submitted BY- {{week.submittedBy}} </span>
+              <span class="slotSubmittedBy">Submitted By- {{week.submittedBy}} </span>
               <span class="checkboxUser">
                 <input type="checkbox" (change)="onCheckboxChange($event, employee.email, 
                         week.startDate, week.endDate, week.weekNo)" />
