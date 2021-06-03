@@ -1,0 +1,239 @@
+<div class="container-fluid"> 
+  <div style="margin-left: -15px;" class="col-sm-3">
+    <app-user-side-panel></app-user-side-panel>
+  </div>
+  <div class="col-sm-9 umAddUser">
+    <div [ngClass]="{'redErrorParent': logCredential}" *ngIf="logCredential">
+      Please fills the all field properly!!!
+    </div>
+    <form class="form-horizontal" [formGroup]="umAddUser" (ngSubmit)="addUserSubmission()">  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Add Profile</h3>
+      </div> 
+      <div class="panel-body">
+      <div class="form-group">
+           <label class="col-sm-2 control-label" >First Name <i class="fa fa-user"></i></label>
+           <div class="col-sm-9">
+             <input  type="text" class="form-control" formControlName="firstName" id="firstName"> 
+             <span  [ngClass]="{'redError': formErrors.firstName}" *ngIf="formErrors.firstName">
+              {{formErrors.firstName}}
+            </span>
+           </div>
+      </div> 
+
+     <div class="form-group">
+        <label class="col-sm-2 control-label">Last Name <i class="fa fa-user"></i></label>
+        <div class="col-sm-9">
+          <input  type="text" class="form-control" formControlName="lastName" id="lastName"> 
+          <span  [ngClass]="{'redError': formErrors.lastName}" *ngIf="formErrors.lastName">
+            {{formErrors.lastName}}
+          </span>
+        </div>
+      </div>
+
+     <div class="form-group">
+          <label class="col-sm-2 control-label">Email <i class="fa fa-envelope"></i></label>
+          <div class="col-sm-9">
+            <input  type="text" class="form-control" formControlName="email" id="email">
+            <span  [ngClass]="{'redError': formErrors.email}" *ngIf="formErrors.email">
+              {{formErrors.email}}
+            </span>
+          </div>
+     </div>
+
+
+     <div class="form-group">
+      <label class="col-sm-2 control-label">Emp ID <i class="fa fa-id-badge"></i></label>
+      <div class="col-sm-9">
+        <input  type="text" class="form-control" formControlName="empId" id="empId">
+        <span  [ngClass]="{'redError': formErrors.empId}" *ngIf="formErrors.empId">
+          {{formErrors.empId}}
+        </span>
+      </div>
+     </div>
+
+
+     <div *ngIf="empRole != 'admin'" class="form-group">
+      <label class="col-sm-2 control-label">Billable <i class="fa fa-id-badge"></i></label>
+      <div class="col-sm-9">
+        <span>
+          <input type="radio" name="billable" (click)="setBillable('Billable')"> YES 
+        </span>
+        <span style="margin-left: 100px;">
+          <input type="radio" name="billable" (click)="setBillable('Non-Billable')"> NO
+        </span>
+      </div>
+     </div>
+
+   
+     <div class = "form-group">
+      <label class="col-sm-2 control-label">Location <i class=" fa fa-map-marker"></i></label>
+      <div class="col-sm-9">
+        <div class="style" style="width: 100px; float:left;  margin-right: 50px;"> 
+          <label>  
+              <input type="radio" name="location" value="" (click)="setradio('onshore')"
+              (ngModelChange)="reset()">    Onshore </label> 
+        </div> 
+        <label>  
+           <input type="radio" name="location" value="" (click)="setradio('offshore')"
+           (ngModelChange)="reset()">       Offshore </label>  
+
+        <div *ngIf="isSelected('onshore')">  
+          <ng-multiselect-dropdown
+           name="location"
+           [(ngModel)]="location"           
+           [placeholder]="'Select Onshore Location'"
+           [data]="onshoreList"
+           formControlName="location"
+           [settings]="onshoreDropDownSettings"
+           (onSelect)="onItemSelectOnshore($event)"
+           (onDeSelect)="onItemDeselectOnshore($event)">
+          </ng-multiselect-dropdown>
+          </div>  
+        <div *ngIf="isSelected('offshore')">  
+          <ng-multiselect-dropdown
+           name="location"
+           [placeholder]="'Select Offshore Location'"
+           [data]="offshoreList"
+           formControlName="location2"
+           [(ngModel)]="location2"           
+           [settings]="offshoreDropDownSettings"
+           (onSelect)="onItemSelectOffshore($event)"
+           (onDeSelect)="onItemDeselectOffshore($event)">
+          </ng-multiselect-dropdown>
+        </div>          
+      </div>
+ </div>
+ 
+ <div class="form-group">
+  <label class="col-sm-2 control-label">Account <i class="fa fa-pie-chart"></i></label>
+  <div class="col-sm-9">
+    <ng-multiselect-dropdown
+       name="accounts"
+       [placeholder]="'Select Account'"
+       [data]="accountsList"
+       formControlName="accounts"
+       [settings]="demoaccountsettings"
+       (onSelect)="onItemSelectDemoAccount($event)"
+       (onDeSelect)="onItemDeSelectDemoAccount($event)"
+       (onSelectAll)="onSelectAllDemoAccount($event)"
+       (onDeSelectAll)="onDeSelectAllDemoAccount($event)">
+    </ng-multiselect-dropdown>
+  </div>
+</div>
+
+ <div class="form-group">
+  <label class="col-sm-2 control-label">Project <i class="fa fa-server"></i></label>
+  <div class="col-sm-9">   
+    <ng-multiselect-dropdown
+       name="projectList"
+       [placeholder]="'Select User Projects'"
+       [data]= "projectDataset"       
+       formControlName="projectList"
+       [settings]="dropdownSettings"
+       (onSelect)="onItemSelect($event)"
+       (onDeSelect)="onItemDeselect($event)"
+       (onSelectAll)="onSelectAll($event)"
+       (onDeSelectAll)="onDeSelectAll($event)">
+    </ng-multiselect-dropdown>
+  </div>
+</div>
+
+     <div class="form-group">
+        <label class="col-sm-2 control-label">Role <i class="fa fa-vcard"></i></label>
+        <div class="col-sm-9">
+          <ng-multiselect-dropdown
+           name="role"
+           [placeholder]="'Select User Role'"
+           [data]="roleList"
+           formControlName="role"
+           [settings]="roleDropDownSettings"
+           (onSelect)="onItemSelectRole($event)"
+           (onDeSelect)="onItemDeselectRole($event)">
+          </ng-multiselect-dropdown>
+        </div>
+     </div>
+
+
+
+
+<!-- ---------------  ADMIN FIELDS  --------------------- -->
+    <!-- <div *ngIf="empRole == 'admin'"> 
+      </div>   -->
+
+
+<!-- ---------------  MANAGER FIELDS  --------------------- -->
+   <div *ngIf="empRole == 'Manager'"> 
+
+    <!-- ----++-------- Manager adding TeamLead -----++-------- -->
+    <div *ngIf="managerSelected == 'Lead'"  class="form-group">
+      <label class="col-sm-2 control-label" >Manager <i class="fa fa-user"></i></label>
+      <div class="col-sm-9">
+        <input disabled="true"  type="text" class="form-control" value={{seniorName}} > 
+      </div>
+    </div>  
+
+
+    <!-- -----++--------- Manager adding User --------++---------- -->
+     <div *ngIf="managerSelected == 'User'" class="form-group">
+      <label class="col-sm-2 control-label">Lead <i class="fa fa-users"></i></label>
+      <div class="col-sm-9">
+        <ng-multiselect-dropdown
+           name="lead"
+           [placeholder]="'Select User Lead'"
+           [data]="leadList"
+           formControlName="lead"
+           [settings]="leadDropDownSettings"
+           (onSelect)="onItemSelectLead($event)"
+           (onDeSelect)="onItemDeselectLead($event)">
+        </ng-multiselect-dropdown>
+      </div>
+     </div>
+    </div>
+
+
+
+    <!-- ---------------  TEAM_LEAD FIELDS  --------------------- -->
+   <div *ngIf="empRole == 'Lead'"> 
+     <div class="form-group">
+      <label class="col-sm-2 control-label" >Lead <i class="fa fa-user"></i></label>
+      <div class="col-sm-9">
+        <input disabled="true"  type="text" class="form-control" value={{seniorName}} > 
+      </div>
+    </div>  
+    </div>
+     
+    <!-- ---------------END  TEAM_LEAD FIELDS  --------------------- -->
+
+     <div class="form-group">
+      <label class="col-sm-2 control-label">Rate <i class="fa fa-usd"></i></label>
+      <div class="col-sm-9">
+        <input  type="number" class="form-control" formControlName="rate" id="rate">
+        <span  [ngClass]="{'redError': formErrors.rate}" *ngIf="formErrors.rate">
+          {{formErrors.rate}}
+        </span>
+      </div>
+     </div>
+
+     <div class="form-group">
+      <label class="col-sm-2 control-label">Vendor <i class="fa fa-building"></i></label>
+      <div class="col-sm-9">
+        <input  type="text" class="form-control" formControlName="vendor" id="vendor">
+        <span  [ngClass]="{'redError': formErrors.vendor}" *ngIf="formErrors.vendor">
+          {{formErrors.vendor}}
+        </span>
+      </div>
+     </div>
+
+       </div>
+       <div class="panel-footer">
+         <div class="btn-toolbar">
+         <button class="btn btn-primary" type="submit">Save</button>
+       </div>
+       </div>
+     </div>
+     </form>
+
+  </div>
+</div> 

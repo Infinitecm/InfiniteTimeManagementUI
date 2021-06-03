@@ -1,0 +1,125 @@
+<div class="col-sm-12">
+  <form class="form-horizontal" [formGroup]="burnForm">
+    <div class="col-sm-12 factorBurnReport">
+      <span *ngIf="errorMsg" class="col-sm-12 errorMsg">Please select all data!</span>
+      <div class="col-sm-4">
+        <label class="col-sm-3 control-label"> Year </label>
+        <div class="col-sm-9">
+          <ng-multiselect-dropdown name="year" [placeholder]="'Select Year'" [data]="yearList"
+            formControlName="year" [settings]="yearDropdownSettings" (onSelect)="onSelectYear($event)"
+            (onDeSelect)="onDeselectYear($event)"  >
+          </ng-multiselect-dropdown>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <label class="col-sm-3 control-label"> Month </label>
+        <div class="col-sm-9">
+          <ng-multiselect-dropdown name="month" [placeholder]="'Select Month'" [data]="monthList"
+            formControlName="month" [settings]="monthDropDownSettings" (onSelect)="onSelectMonth($event)"
+            (onDeSelect)="onDeselectMonth($event)">
+          </ng-multiselect-dropdown>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <label class="col-sm-3 control-label"> Account </label>
+        <div class="col-sm-9">
+          <ng-multiselect-dropdown name="account" [placeholder]="'Select Account '" [data]="accountList"
+            formControlName="account" [settings]="accountDropDownSettings" (onSelect)="onSelectAccount($event)"
+            (onDeSelect)="onDeselectAccount($event)">
+          </ng-multiselect-dropdown>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <label class="col-sm-3 control-label"> Project </label>
+        <div class="col-sm-9">
+          <ng-multiselect-dropdown name="project" [placeholder]="'Select Project '" [data]="projectList"
+            formControlName="project" [settings]="projectDropDownSettings" (onSelect)="onSelectProject($event)"
+            (onDeSelect)="onDeselectProject($event)">
+          </ng-multiselect-dropdown>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8"></div>
+    <div class="col-sm-4 buttonAction">
+      <div class="searchBurnReport">
+        
+        <button type="submit" class="btn btn-success" (click)="searchMonthlyTimesheet()"> 
+          Search <i class="fa fa-search"></i></button>
+
+      </div>
+      <div class="downloadBurnReport">
+        <button [disabled]="burnReportBool" class="btn btn-primary" (click)="downloadBurnReports()">
+          Download Report <i class="fa fa-download"></i></button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+<div [ngClass]="{'noBurnData':burnReportBool, 'burnDataExists':!burnReportBool}" style="margin-top: 40px;"
+  class="col-sm-12">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+    class="row-border table-hover table-striped table-bordered">
+
+    <!-- <table id="example" class="stripe row-border order-column"> -->
+    <thead>
+      <ng-container *ngFor="let report of burnReports;index as i">
+        <tr *ngIf="i === 0">
+          <th>Emp Id </th>
+          <th>Name</th>
+          <th>Account</th>
+          <th>Project</th>
+          <th>Location</th>
+          <th>Billable/Non-BIllable</th>
+          <th *ngFor="let day of report.hours">
+            {{day.day}}<br />
+            {{day.date}}
+          </th>
+          <th>totalHours</th>
+          <th *ngFor="let week of report.weeks; index as i">
+            Week{{i+1}}
+          </th>
+          <th>No. Of Leaves</th>
+          <th>No. Of Working Days</th>
+          <th>BillRate</th>
+          <th>Amount</th>
+        </tr>
+      </ng-container>
+    </thead> 
+    <tbody>
+      <tr *ngFor="let employee of burnReports">
+       <!--  {{employee.account}}
+        {{employee.project}} -->
+        <td>{{employee.empId}}</td>
+        <td>{{employee.empName}}</td>
+        <td>{{employee.account}}</td>
+        <td>{{employee.project}}</td>
+        <td>{{employee.location}}</td>
+        <td> {{employee.isBillable}} </td>
+        <td [ngClass]="{'HolidayT': (day.hoursPerDay === 'H'), 'LeaveT': (day.hoursPerDay === 'L')}" *ngFor="let day of employee.hours">
+          {{day.hoursPerDay}}
+        </td>
+        <td> {{employee.totalHours}} </td>
+        <td *ngFor="let week of employee.weeks">
+          {{week}}
+        </td>
+        <td> {{employee.noOfLeaves}} </td>
+        <td> {{employee.noOfWorkingDays}} </td>
+        <td> {{employee.billRate}} </td>
+        <td> {{employee.amount}} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-sm-12">
+  <div *ngIf="burnReportBool == true" class="noDataExists">
+    <span class="msg1">No Employee found for the Month!</span><br />
+    <span class="msg2">Please do Approve or Reject the submitted timesheet.</span>
+
+  </div>
+</div>

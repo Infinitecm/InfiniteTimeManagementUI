@@ -1,0 +1,12 @@
+{  
+    "firstName": "Karan",
+    "lastName": "Singh",
+    "emailId":  "Karandeep.Chhabra@infinite.com",
+    "role": "Manager",
+    "rate": "25$",
+    "vendor": "Infinite",
+    "project": [
+        "Tm",
+        "Vmas"
+    ]
+}

@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "valid.project",
+    "type": "java.lang.String",
+    "description": "A description for 'valid.project'"
+  },
+  {
+    "name": "server.context-path",
+    "type": "java.lang.String",
+    "description": "A description for 'server.context-path'"
+  },
+  {
+    "name": "crypto-key",
+    "type": "java.lang.String",
+    "description": "A description for 'crypto-key'"
+  }
+]}

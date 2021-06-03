@@ -1,0 +1,78 @@
+<div class="buldHeading"> Bulk Approval/Reject </div>
+<hr>
+<div class="col-lg-12 col-sm-12 col-xs-12 bulkContainer">
+  <div class="col-sm-6">
+    <ngx-daterangepicker [(ngModel)]="selectedDate" (ngModelChange)="dateChange($event)" [options]="options">
+    </ngx-daterangepicker>
+    
+  </div>
+  <div class="col-sm-3 bulkSearch">
+    <button (click)="searchBulkEmployees()" type="button">Search <i class="fa fa-search "></i></button>
+  </div>
+
+  <div class="col-sm-12 col-xs-12 bulkListSearch">
+    <ng-template [ngIf]="bulkEmployees.length > 0 ">
+    <div class="panel-group" *ngFor="let employee of bulkEmployees">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#{{(employee.firstName).replace(' ','')}}">
+              {{employee.firstName}} {{employee.lastName}}
+              <span class="actionsNumber">{{employee.weeks.length}}</span>
+             </a>
+              
+              <span class="rightAlignedData">
+                <span class="actionRoles">Role - {{employee.role}}</span>
+                <!-- <input type="checkbox" (change)="onBulkCheckBoxChange($event, employee.email, employee.weeks)"> -->
+                <a data-toggle="collapse" href="#{{(employee.firstName).replace(' ','')}}">
+                   <i class="fa fa-chevron-down"></i>
+                </a>
+              </span>
+
+             </h4>
+              
+
+        </div>
+        <div id="{{(employee.firstName).replace(' ','')}}" class="panel-collapse collapse">
+          <ul class="list-group">
+            <li *ngFor="let week of employee.weeks" class="list-group-item weekEntity">
+              <div class="list">
+              <section class="dateSlots">
+                {{week.startDate}} - {{week.endDate}}  <span class="actionsNumber2">{{week.totalHours}}</span>
+              </section>
+              
+              <span class="slotSubmittedBy">Submitted By- {{week.submittedBy}} </span>
+              <span class="checkboxUser">
+                <input type="checkbox" (change)="onCheckboxChange($event, employee.email, 
+                        week.startDate, week.endDate, week.weekNo)" />
+              </span>
+            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="bulkEmployees.length === 0"> 
+    <h3 class="noSubmittedData"> NO DATA EXISTS </h3>
+  </ng-template>  
+
+    <div class="col-sm-3 buttonAction">
+      <button 
+        [disabled]="bulkEmployees.length === 0"
+        class="btn btn-primary btn-block" 
+        (click)="actionOnBulkApproveOrRejection('approve')"> 
+        <i class="fa fa-thumbs-up"></i> Bulk Approve</button>
+    </div>
+    <div class="col-sm-3 buttonAction">
+      <button 
+         [disabled]="bulkEmployees.length === 0"
+         class="btn btn-danger btn-block" (click)="actionOnBulkApproveOrRejection('reject')"> 
+        <i class="fa fa-thumbs-down"></i> Bulk Reject</button>
+    </div>
+
+  </div>
+
+</div>

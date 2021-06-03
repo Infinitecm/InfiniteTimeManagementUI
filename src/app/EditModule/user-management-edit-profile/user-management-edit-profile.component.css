@@ -1,0 +1,37 @@
+.umEditUser{
+    position: relative;
+    top: 98px;
+  }
+.umEditUser label{
+    color:#445;
+  }
+.umEditUser input{
+    background:#fff;
+  }
+.panel-title{
+    text-align:center;
+    font-weight:bold;
+    font-family: 'Fira Sans', sans-serif;  
+}
+.redError{
+    color:red;
+}
+   .redErrorParent{
+    color:red;
+    text-align: center;
+    font-size: 17px;
+    padding:5px 0px;
+    font-weight: bold; 
+   }
+/* -- HIDINIG UP/DOWN ARROW OF INPUT TYPE NUMBER -- */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -webkit-text-security: disc;
+  -moz-appearance: textfield;
+}

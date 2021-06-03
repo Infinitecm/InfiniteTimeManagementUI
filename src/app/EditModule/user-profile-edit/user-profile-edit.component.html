@@ -1,0 +1,113 @@
+<div class="container"> 
+  <div class="col-sm-3"></div>
+  <div class="col-sm-9 editYourProfile">
+   <form [formGroup]="editProfileEmpForm" class="form-horizontal">
+      <div class="panel panel-primary">
+       <div class="panel-heading">
+         <h2 class="panel-title">Edit Your Profile <i style="color:#565;" class="fa fa-pencil"></i></h2>
+       </div> 
+       <div class="panel-body">
+         <div class="form-group">
+        <div class="col-sm-6">
+            <label><i class="fa fa-user"></i> First Name</label><br/>
+            <div >
+              <input type="text" class="form-control" formControlName="firstName" id="firstName">
+              <span  [ngClass]="{'redError': formErrors.firstName}" *ngIf="formErrors.firstName">
+                {{formErrors.firstName}}
+              </span>
+             </div>
+      </div>
+      <div class="col-sm-6">
+            <label><i class="fa fa-user"></i> Last Name</label><br/>
+            <div >
+              <input type="text" class="form-control" formControlName="lastName" id="lastName">
+              <span  [ngClass]="{'redError': formErrors.lastName}" *ngIf="formErrors.lastName">
+                {{formErrors.lastName}}
+              </span>
+             </div>
+      </div>
+          </div> 
+       
+        <div class="form-group">
+        <div class="col-sm-6">
+            <label><i class="fa fa-building-o"></i> Company </label><br/>
+            <div >
+              <input type="text" class="form-control" formControlName="company" id="company">
+              <span  [ngClass]="{'redError': formErrors.company}" *ngIf="formErrors.company">
+                {{formErrors.company}}
+              </span>
+             </div>
+      </div>
+      <div class="col-sm-6">
+            <label><i class="fa fa-phone"></i> Phone Number </label><br/>
+            <div>
+              <input type="text" class="form-control" formControlName="phone" id="phone">
+              <span  [ngClass]="{'redError': formErrors.phone}" *ngIf="formErrors.phone">
+                {{formErrors.phone}}
+              </span>
+             </div>
+      </div>
+          </div>
+  
+         <div class="form-group">
+        <div class="col-sm-6">
+            <label><i class="fa fa-address-card-o"></i> Address </label><br/>
+            <div >
+              <input type="text" class="form-control" formControlName="address" id="address">
+              <span  [ngClass]="{'redError': formErrors.address}" *ngIf="formErrors.address">
+                {{formErrors.address}}
+              </span>
+             </div>
+      </div>
+      <div class="col-sm-6">
+            <label><i class="fa fa-road"></i> City </label><br/>
+            <div >
+              <input type="text" class="form-control" formControlName="city" id="">
+              <span  [ngClass]="{'redError': formErrors.city}" *ngIf="formErrors.city">
+                {{formErrors.city}}
+              </span>
+             </div>
+      </div>
+          </div> 
+      
+      <div class="form-group">
+        <div class="col-sm-3">
+            <label><i class="fa fa-map-marker"></i> State </label><br/>
+            <div >
+              <input type="text" class="form-control" formControlName="state" id="state">
+              <span  [ngClass]="{'redError': formErrors.state}" *ngIf="formErrors.state">
+                {{formErrors.state}}
+              </span>
+             </div>
+      </div>
+      <div class="col-sm-3">
+            <label><i class="fa fa-map-pin"></i> ZipCode </label><br/>
+            <div >
+              <input type="text" class="form-control" formControlName="zipCode" id="zipCode">
+              <span  [ngClass]="{'redError': formErrors.zipCode}" *ngIf="formErrors.zipCode">
+                {{formErrors.zipCode}}
+              </span>
+             </div>
+      </div>
+      <div class="col-sm-6">
+            <label><i class="fa fa-globe"></i> Country </label><br/>
+            <div >
+              <input type="text" class="form-control" formControlName="country" id="country">
+              <span  [ngClass]="{'redError': formErrors.country}" *ngIf="formErrors.country">
+                {{formErrors.country}}
+              </span>
+             </div>
+      </div>
+          </div> 
+  
+      
+        </div>
+        <div class="panel-footer">
+          <div class="btn-toolbar">
+          <button class="btn btn-primary" type="submit"><i class="fa fa-upload"></i> Upload</button>
+        </div>
+        </div>
+      </div>
+     </form>
+   </div>
+   </div>

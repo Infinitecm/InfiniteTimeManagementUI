@@ -1,0 +1,214 @@
+.redError{
+ color:red;
+}
+.redErrorParent{
+ color:red;
+ text-align: center;
+ font-size: 17px;
+ padding:5px 0px;
+ font-weight: bold; 
+}
+.bannerBody{
+    min-height: 100vh;
+    height: auto;
+    background-image: url("../../assets/img/timesheet4.jpg"); 
+    background-repeat: no-repeat, repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding-top: 30px;
+ }
+ .tool_title_login h1{
+	color: #060457;
+    font-family: 'Fira Sans', sans-serif;
+    text-shadow: 2px 2px 2px #eee;
+    font-size: 46px;
+    font-weight: bold;
+}
+.tool_title_login span{
+	color: #efe;
+    font-size: 30px;
+	font-family: 'Fira Sans', sans-serif;
+	text-shadow:1px 2px 3px #111;
+    margin-left: 220px;
+}
+.login-box {
+	filter: blur(0px);
+	padding-bottom:25px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    height: auto;
+    background: rgba(215,220,205,0.4);
+    text-align: center;
+    box-shadow: 2px 3px 10px #333;
+	border-radius: 10px 10px 10px 10px;
+	padding-left: inherit;
+    padding-right: inherit;
+}
+/**.tool_title{
+	font-size:35px;
+	color: #eee;
+	padding:2px;
+	background:#127eb8;
+    text-shadow: 2px 2px 3px #454;
+	box-shadow:1px 2px 7px #111;
+}*/
+.login-title {
+    text-align: center;
+    font-size: 27px;
+    letter-spacing: 2px;
+    margin-top: px;
+    font-weight: bold;
+    color: #eff;
+	text-shadow:1px 2px 5px #000;
+}
+
+.login-form {
+    margin-top: 11px;
+    text-align: left;
+}
+
+input[type=text] {
+    background-color: transparent;
+    border-top: 0px;
+    border: 2px solid #404172;
+	margin-top:5px;
+    padding: 10px 10px;
+    border-radius: 0px;
+    outline: 0;
+	font-weight:bold;
+    color: #04022e;
+}
+
+input[type=email] {
+    background-color: transparent;
+    border-top: 0px;
+    border: 2px solid #404172;
+	margin-top:5px;
+    padding: 10px 10px;
+    border-radius: 0px;
+    outline: 0;
+	font-weight:bold;
+    color: #04022e;
+}
+
+input[type=password] {
+    background-color: transparent;
+    border-top: 0px;
+	border: 2px solid #404172;
+	margin-top:5px;
+    padding: 10px 10px;
+    border-radius: 0px;
+    outline: 0;
+    font-weight: bold;
+    color: #04022e;
+}
+
+.form-group {
+    margin-bottom: 40px;
+    outline: 0px;
+}
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	letter-spacing:0.2px;
+    border: 2px solid #35365e;
+    outline: 0;
+    background-color: transparent;
+	font-size:17px;
+    color: #010;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.form-control-label {
+    font-size: 15px;
+    color: #122;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-control-label  i{
+    color: #334;
+}
+
+.btn-outline-primary {
+    border-radius: 2px;
+    font-weight: bold;
+	padding:6px 16px;
+    border: 2px solid #212;
+    letter-spacing: 1px;
+    transition-duration: 1s;
+	margin-left:-15px;
+	color: #fee;
+	background:#363b69;
+}
+.login-button {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.btn-outline-primary:hover{
+    color:#221;
+	background:transparent;
+	transition-duration: 0.6s;
+}
+.login-text {
+    text-align: right;
+	cursor:pointer;
+}
+.login-text a{
+    color:#332;
+}
+
+.loginbttm {
+    padding: 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.tool_title_login h1{
+  	  font-size:30px;
+	  margin-left:-30px;
+	  text-align:center;
+    }
+    .tool_title_login span{
+	  font-size: 22px;
+	  margin-left:150px;
+	  text-align:center;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.tool_title_login h1{
+  	  font-size:20px;
+	  margin-left:-30px;
+	  text-align:center;
+    }
+    .tool_title_login span{
+	  font-size: 15px;
+	  margin-left:20px;
+	  text-align:center;
+	}
+    .login-key {
+        height: 100px;
+        font-size: 45px;
+    }
+    .login-title {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+    .login-box {
+        padding-bottom:20px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px 0px 5px 5px;
+    }
+    .btn-outline-primary {
+        border-radius: 1px;
+        font-size:11px;
+    }
+    .form-control-label {
+        font-size: 12px;
+    }
+  }

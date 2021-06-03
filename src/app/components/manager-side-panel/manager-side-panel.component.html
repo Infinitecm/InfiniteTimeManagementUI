@@ -1,0 +1,35 @@
+<div class="sidePanelTimesheet">
+  <div class="leftPanelInfo">
+    <div class="currentDate">Today's Date:
+      {{month}}/{{date}}/{{todayDate.getFullYear()}} </div>
+
+    <div class="managerMenu">
+      <ul>
+        <li [ngClass]="{'optManagerSelected':(selectedTo === 'UserManagement')}"
+          (click)="actionOnBulkOperation('UserManagement')">
+          <i class="fa fa-user"></i> User Management</li>
+
+        <li *ngIf= "(loggedRole != 'admin')" [ngClass]="{'optManagerSelected':(selectedTo === 'BulkAction')}"
+          (click)="actionOnBulkOperation('BulkAction')">
+          <i class="fa fa-users"></i> Bulk Approval/Reject</li>
+
+        <!-- <li [ngClass]="{'optManagerSelected':(selectedTo === 'PoSummay')}" (click)="actionOnBulkOperation('PoSummay')">
+          <i class="fa fa-envelope"></i> PO Summary <span class="eye">
+            <i class="fa fa-eye-slash"></i> </span></li> -->
+
+        <li [ngClass]="{'optManagerSelected':(selectedTo === 'UserBurnRate')}" (click)="actionOnBulkOperation('UserBurnRate')">
+          <i class="fa fa-briefcase"></i> Report <span class="eye">
+            <i class="fa fa-eye-slash"></i> </span> </li>
+
+        <!-- <li (click)="actionOnBulkOperation('PoSummay')">
+          <i class="fa fa-suitcase"></i> Project Burn Rate <span class="eye">
+            <i class="fa fa-eye-slash"></i> </span> </li>
+
+        <li (click)="actionOnBulkOperation('PoSummay')">
+          <i class="fa fa-briefcase"></i> Deliverables <span class="eye">
+            <i class="fa fa-eye-slash"></i> </span></li> -->
+      </ul>
+    </div>
+
+  </div>
+</div>

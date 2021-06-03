@@ -1,0 +1,118 @@
+.calendar-container{
+    height: 220px !important;
+}
+.buldHeading{
+    text-align: center;
+    color: #449;
+    font-weight: bold;
+    font-size: 20px;
+}
+.bulkSearch button{
+    background: #84af2c;
+    border: 1px solid yellowgreen;
+    color:#fff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px 22px;
+    transition: ease-in-out 0.4s;
+    border-radius: 5px;
+}
+.bulkSearch button:hover{
+    background: yellowgreen;
+    border: 1px solid #455;
+    transition: ease-in-out 0.4s;
+}
+hr{
+    height: 3px;
+    border-width: 0px;
+    margin-top: 0.5em;
+    background: cyan;
+}
+.bulkContainer{
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 1px 1px 10px #ddd;
+    border-radius: 5px 15px;
+}
+.bulkListSearch{
+    margin-top: 45px;
+}
+.panel-group{
+    margin-bottom: 8px !important;
+}
+.panel-heading{
+    /* background: cornflowerblue; */
+    background-image: linear-gradient(-45deg,#a1d8bf 36%,#034f84 0);
+}
+.panel-heading a{
+   color:#eee;
+}
+
+.actionsNumber{
+    background: red;
+    padding: 3px 6px;
+    border-radius: 54%;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: -7px;
+    position: relative;
+    color: #fff;
+    top: -9px;
+}
+.actionsNumber2{
+    background: blue;
+    padding: 3px 4px;
+    border-radius: 54%;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: -7px;
+    position: relative;
+    color: #fff;
+    top: -9px;
+}
+.bulkListSearch h4 {
+    color: #0a1a35;
+    font-weight: bold;
+}
+.rightAlignedData{
+    float:right;
+}
+.rightAlignedData input{
+    transform: scale(1.6);
+    margin-right: 40px;
+}
+.rightAlignedData .actionRoles{
+    margin-right: 170px;
+    color:#434;
+}
+.rightAlignedData i{
+    color:#fff;
+    transform: scale(1.1);
+}
+
+
+.weekEntity{
+   color: lightslategrey; 
+   font-weight: bold;
+}
+.dateSlots{
+    width: 300px;
+    display: inline-block;
+}
+.slotSubmittedBy{
+   position: relative;
+   left:230px;
+}
+.checkboxUser{
+    float: right;
+    margin-right: 14px;
+}
+.buttonAction{
+   margin-top: 40px;
+}
+.noSubmittedData{
+    text-align: center;
+    color: darkgray;
+    margin-top: 50px;;
+    margin-bottom: 50px;
+}

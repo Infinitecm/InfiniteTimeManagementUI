@@ -1,0 +1,128 @@
+.userTimesheetMain{
+    padding-top:100px;
+  }
+
+.underList{
+    background: #fef;
+    height: 330px;
+    border-radius: 0px 0px 5px 5px;
+    overflow-y: auto;	
+}
+.underList ul {
+   list-style: none;
+   margin-left: -40px;	
+}
+.underList li {
+    background: #fef;
+    color: #445;
+    border-bottom: 1px  solid #aa9;
+    border-left: 4px solid darkcyan;
+    border-radius: 20px 0px 0px 7px;
+    padding: 5px 10px;
+    font-weight: bold;
+	transition-duration: 0.5s;
+	cursor:pointer;
+}
+.underList li:hover{
+    background: #a6bfde;
+    color: #131306;
+	padding-left: 12px;
+}
+.underList .managerPosition{
+    font-weight: normal;
+}
+.underList li.selected {
+    background: #a6bfde;
+    color: #131306;
+  }
+.underList li.selected:hover {
+    background: #a6bfde;
+    color: #101;
+} 
+.underList li i {
+    color: #445;
+} 
+.timesheetIcon {
+    font-size: 19px !important;
+}
+.timesheetIcon1{
+    font-size: 18px !important;
+}
+.allMember{
+	background: #337ab7;
+    padding: 11px;
+    border-radius: 15px 4px 0px 0px;
+    color: #eee;
+}
+.addMember{
+	float: right;
+	padding: 1px 6px;
+    background: #eef;
+    border-radius: 7px 1px 1px 1px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+.addMember:hover{
+    background-color: #337ab7;
+}
+.addMember i{
+	color:#5454bf;
+}
+
+.addMember:hover i{
+    color: #eef;
+}
+.seniorEditMember{
+    float: right;
+    margin-top: -10px;
+}
+.seniorEditMember i{
+    color:#101;
+}
+.seniorEditMember i:hover{
+    color:red;
+}
+
+.listOfMember{
+   	background: #fef;
+    height: 330px;
+    overflow-y: auto;
+    border-radius: 5px;
+    
+}
+.individualMember ul {
+   list-style: none;
+   margin-left: -40px;	
+}
+.individualMember li {
+    background: #fef;
+    color: #445;
+    border-bottom: 1px solid #aa9;
+    border-left: 4px solid darkcyan;
+    border-radius: 14px 0px 0px 7px;
+    padding: 8px 10px;
+	font-size: 15px;
+	font-weight:bold;
+}
+.individualMember li:hover{
+    background: #bed7f7;
+}
+.individualMember .memberName{
+    color: #445;
+	/* cursor:pointer; */
+}
+.individualMember .memberName:hover{
+	/* text-decoration: underline; */
+    color: #221;
+	/* text-shadow:1px 1px 1px #ddd; */
+}
+.individualMember .editMember{
+	float:right; 
+}
+.individualMember .editMember i{
+	/* float:right; */
+	cursor:pointer;
+}
+.individualMember .editMember i:hover{
+	color:red;
+}

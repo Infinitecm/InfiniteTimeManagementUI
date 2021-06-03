@@ -1,1 +1,345 @@
-/* You can add global styles to this file, and also import other style files */
+
+.alerts-container {
+    position: absolute;
+    right: 0;
+    top: 0em;
+
+    padding: 0 2em;
+    max-height: 90vh;
+    overflow: hidden;
+    font-family: 'Fira Sans', sans-serif;
+    color: black;
+    font-size: 9;
+    font-weight: bold;
+    border: 0px solid black; 
+    border-top-color: #0D48C5;
+  }  
+  .alert {
+    position: relative;
+    width: 350px;
+    height: 162px;
+    padding: 22px;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 9;
+    border-top: 10px solid #4d5256;
+    transform-origin: 50% 0%;
+    top: 0;
+    color: black;
+    box-shadow: 5px 13px 10px -5px rgba(0,0,0,0.2);
+    border-top-color: #0D48C5;
+  }
+  .alert-success { border-top-color: #0D48C5; 
+    font-size: 8; font-family:  'Fira Sans', sans-serif;
+    color: black; }
+  a.close {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+  }  
+  a.close:hover {
+    color:black;
+  }
+  .alert-inside {
+    font-size: 9;
+    margin-top: 1em;
+    display: flex;
+  }
+  .alert-inside img {
+    width: 30px;
+    height: 30px;
+  }
+  .alert-inside .alert-message {
+    margin-top: 0;
+    margin-left: 1em;
+  }
+  .card {
+    padding: 0 24px;
+  }
+  .alert.show {
+    animation-name: flipInX;
+    animation-duration: 0.8s;
+  }
+  
+
+  
+.alerts2-container {
+  position: absolute;
+  right: 0;
+  top: 0em;  
+  padding: 0 2em;
+  max-height: 90vh;
+  overflow: hidden;
+  font-family: 'Fira Sans', sans-serif;
+  color: black;
+  font-size: 9;
+  font-weight: bold;
+  border: 0px solid black; 
+  border-top-color: #0D48C5;
+}  
+.alert2 {
+  position: relative;
+  width: 350px;
+  height: 162px;
+  padding: 22px;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 9;
+  border-top: 10px solid #4d5256;
+  transform-origin: 50% 0%;
+  top: 0;
+  color: black;
+  box-shadow: 5px 13px 10px -5px rgba(0,0,0,0.2);
+  border-top-color: #0D48C5;
+}
+.alert2-success { border-top-color: #0D48C5; font-size: 9; font-family:  'Fira Sans', sans-serif;
+  color: black; }
+a.close {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+}  
+a.close:hover {
+  color:black;
+}
+.alert2-inside {
+  font-size: 9;
+  margin-top: 1em;
+  display: flex;
+}
+.alert2-inside img {
+  width: 30px;
+  height: 30px;
+}
+.alert2-inside .alert2-message {
+  margin-top: 0;
+  margin-left: 1em;
+}
+.card {
+  padding: 0 24px;
+}
+.alert2.show {
+  animation-name: flipInX;
+  animation-duration: 0.8s;
+}
+
+
+
+.alerts3-container {
+  position: absolute;
+  right: 0;
+  top: 0em;
+  padding: 0 2em;
+  max-height: 90vh;
+  overflow: hidden;
+  font-family: 'Fira Sans', sans-serif;
+  color: black;
+  font-size: 9;
+  font-weight: bold;
+  border: 0px solid black; 
+  border-top-color: #0D48C5;
+}  
+.alert3 {
+  position: relative;
+  width: 350px;
+  height: 162px;
+  padding: 22px;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 9;
+  border-top: 10px solid #4d5256;
+  transform-origin: 50% 0%;
+  top: 0;
+  color: black;
+  box-shadow: 5px 13px 10px -5px rgba(0,0,0,0.2);
+  border-top-color: #0D48C5;
+}
+.alert3-success { border-top-color: #0D48C5; font-size: 9; font-family:  'Fira Sans', sans-serif;
+  color: black; }
+a.close {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+}  
+a.close:hover {
+  color:black;
+}
+.alert3-inside {
+  font-size: 9;
+  margin-top: 1em;
+  display: flex;
+}
+.alert3-inside img {
+  width: 30px;
+  height: 30px;
+}
+.alert3-inside .alert3-message {
+  margin-top: 0;
+  margin-left: 1em;
+}
+.card {
+  padding: 0 24px;
+}
+.alert3.show {
+  animation-name: flipInX;
+  animation-duration: 0.8s;
+}
+
+
+
+
+
+
+/* BELL */
+
+@-webkit-keyframes ring {
+  0% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+  2% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  4% {
+    -webkit-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+  }
+
+  6% {
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg);
+  }
+
+  8% {
+    -webkit-transform: rotate(-22deg);
+    transform: rotate(-22deg);
+  }
+
+  10% {
+    -webkit-transform: rotate(22deg);
+    transform: rotate(22deg);
+  }
+
+  12% {
+    -webkit-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+  }
+
+  14% {
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg);
+  }
+
+  16% {
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+  }
+
+  18% {
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes ring {
+  0% {
+    -webkit-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+  2% {
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  4% {
+    -webkit-transform: rotate(-18deg);
+    -ms-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+  }
+
+  6% {
+    -webkit-transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+    transform: rotate(18deg);
+  }
+
+  8% {
+    -webkit-transform: rotate(-22deg);
+    -ms-transform: rotate(-22deg);
+    transform: rotate(-22deg);
+  }
+
+  10% {
+    -webkit-transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+    transform: rotate(22deg);
+  }
+
+  12% {
+    -webkit-transform: rotate(-18deg);
+    -ms-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+  }
+
+  14% {
+    -webkit-transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+    transform: rotate(18deg);
+  }
+
+  16% {
+    -webkit-transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+  }
+
+  18% {
+    -webkit-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+    transform: rotate(12deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.faa-ring.animated,
+.faa-ring.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-ring {
+  -webkit-animation: ring 2s ease infinite;
+  animation: ring 2s ease infinite;
+  transform-origin-x: 50%;
+  transform-origin-y: 0px;
+  transform-origin-z: initial;
+}

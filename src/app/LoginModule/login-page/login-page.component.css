@@ -1,0 +1,6 @@
+.redError{
+    color:red;
+}
+input:-internal-autofill-selected{
+    background-color: transparent !important;
+} 

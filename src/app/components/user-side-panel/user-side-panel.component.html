@@ -1,0 +1,19 @@
+<div class="sidePanelTimesheet">
+  <div class="leftPanelInfo">
+    <div class="currentDate">Today's Date:
+      {{month}}/{{date}}/{{todayDate.getFullYear()}} </div>
+    <div
+      *ngIf="!(router.url === '/userChangePassword') && !(router.url === '/umAddUser') && !(router.url === '/umEditUser')"
+      class="currentDate">
+      <i class="fa fa-clock-o"></i> Time Sheet Entry
+    </div>
+
+    <!-- <div class="managerMenu">
+      <ul>
+        <li click)="mentionLeave()">
+          <i class="fa fa-user"></i> Mention Leave
+        </li>
+      </ul>
+    </div> -->
+  </div>
+</div>
