@@ -56,7 +56,7 @@ import com.infinite.tm.util.EmailUtility;
 
 @RestController
 @Component
-@CrossOrigin(origins = "http://172.16.21.12:80")
+@CrossOrigin(origins = "http://172.16.21.12:8060")
 @RequestMapping("/TM/TimesheetEntry")
 public class TimesheetEntryController {
 
@@ -1431,9 +1431,9 @@ public class TimesheetEntryController {
 		String subject = "TM Submission - " + data.getFirstName() + " " + data.getLastName() + "- (" + startDate + " - "
 				+ endDate + ")";
 
-		String approveLink = "<a href=\"http://172.16.21.12:80/TM/TimesheetEntry/approveTimesheetDetails?email=" + email
+		String approveLink = "<a href=\"http://172.16.21.12:8060/TM/TimesheetEntry/approveTimesheetDetails?email=" + email
 				+ "&weekNo=" + weekNo + "&startDate=" + startDate + "&endDate=" + endDate + "&approverRole=lead\">";
-		String rejectLink = "<a href=\"http://172.16.21.12:80/TM/TimesheetEntry/rejectTimesheetDetails?email=" + email
+		String rejectLink = "<a href=\"http://172.16.21.12:8060/TM/TimesheetEntry/rejectTimesheetDetails?email=" + email
 				+ "&weekNo=" + weekNo + "&startDate=" + startDate + "&endDate=" + endDate + "&approverRole=lead\">";
 
 		StringBuilder builder = new StringBuilder();
