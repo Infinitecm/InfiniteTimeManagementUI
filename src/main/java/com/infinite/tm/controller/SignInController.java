@@ -20,7 +20,7 @@ import com.infinite.tm.util.EmailUtility;
 import com.infinite.tm.util.GeneratePassword;
 
 @RestController
-@CrossOrigin(origins="http://localhost:80")
+@CrossOrigin(origins="http://172.16.21.12:80")
 @RequestMapping("/TM")
 public final class SignInController {
 	
