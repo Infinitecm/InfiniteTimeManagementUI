@@ -1433,7 +1433,7 @@ public class TimesheetEntryController {
 
 		String approveLink = "<a href=\"http://localhost:8060/TM/TimesheetEntry/approveTimesheetDetails?email=" + email
 				+ "&weekNo=" + weekNo + "&startDate=" + startDate + "&endDate=" + endDate + "&approverRole=lead\">";
-		String rejectLink = "<a href=\"http://localhost:8060/TM/TimesheetEntry/rejectTimesheetDetails?email=" + email
+		String rejectLink = "<a href=\"http://172.16.21.12:80/TM/TimesheetEntry/rejectTimesheetDetails?email=" + email
 				+ "&weekNo=" + weekNo + "&startDate=" + startDate + "&endDate=" + endDate + "&approverRole=lead\">";
 
 		StringBuilder builder = new StringBuilder();
