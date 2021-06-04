@@ -56,7 +56,7 @@ import com.infinite.tm.util.EmailUtility;
 
 @RestController
 @Component
-@CrossOrigin(origins = "http://localhost:80")
+@CrossOrigin(origins = "http://172.16.21.12:80")
 @RequestMapping("/TM/TimesheetEntry")
 public class TimesheetEntryController {
 
@@ -1267,7 +1267,7 @@ public class TimesheetEntryController {
 			int weekNo, String startDate, String endDate) {
 		logger.info("inside Auto  approveEmailNotification");
 
-		String TmLink = "<a href=\"http://localhost:8060/#/login\">";
+		String TmLink = "<a href=\"http://172.16.21.12:80/#/login\">";
 
 		String subject = "Auto Approval of TimeSheet - " + userName + "- (" + userEmpId + ")";
 
