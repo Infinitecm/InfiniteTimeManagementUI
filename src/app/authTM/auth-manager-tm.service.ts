@@ -96,7 +96,7 @@ export class AuthManagerTmService {
   
   // ---FETCH ACCOUNT DETAILS
   getAccountAndProject(){
-    return this.http.get('http://localhost:8060/TM/Profile/accountDetails')
+    return this.http.get('http://172.16.21.12:8060/TM/Profile/accountDetails')
         .pipe(
           tap(
             (error: HttpErrorResponse) => {
