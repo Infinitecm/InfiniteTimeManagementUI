@@ -1,6 +1,6 @@
 {
   "/TM": {
-    "target": "http://172.16.21.12:80",
+    "target": "http://172.16.21.12:8060",
     "secure": false
   }
 }
