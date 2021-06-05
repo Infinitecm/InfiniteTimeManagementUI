@@ -125,7 +125,7 @@ doLogin(email:string, password:string) : Observable<any>{
 
 getAllEmployees1() : Observable<IAllEmployee[]>{
   console.log("Inside getEmp");
-  return this.http.get<IAllEmployee[]>('http://localhost:8060/TM/all')
+  return this.http.get<IAllEmployee[]>('http://172.16.21.12:8060/TM/all')
 }
 
 
